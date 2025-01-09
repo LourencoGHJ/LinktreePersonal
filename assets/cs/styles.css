@@ -1,0 +1,326 @@
+
+
+
+/* ===================================== */
+/* RESET STYLES - Criado por LourencoGHJ               
+/* ===================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+/* ===================================== */
+/*             BODY STYLES               */
+/* ===================================== */
+body {
+  font-family: 'San Francisco', -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f5f7; /* Cor neutra de fundo, suave como a Apple */
+  color: #333; /* Texto escuro, legível e suave */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+  text-align: center;
+  perspective: 1200px;
+}
+
+/* ===================================== */
+/*             CONTAINER STYLES          */
+/* ===================================== */
+.container {
+  width: 100%;
+  max-width: 900px;
+  background: #fff; /* Branco puro para a sensação clean */
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra sutil, como a Apple */
+  overflow: hidden;
+  animation: slideIn 1.2s ease-out;
+  transform-style: preserve-3d;
+  position: relative;
+  z-index: 10;
+}
+
+/* ===================================== */
+/*             PROFILE SECTION           */
+/* ===================================== */
+.profile {
+  padding: 70px 25px;
+  background: #ffffff;
+  box-shadow: 0 15px 45px rgb(255, 255, 255);
+  border-radius: 20px;
+  transform: rotateX(0deg);
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.profile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgb(255, 255, 255);
+}
+
+.profile img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 6px solid #f9f9f9;
+  margin-bottom: 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.3s ease;
+  object-fit: cover;
+}
+
+.profile img:hover {
+  transform: rotate(7deg) scale(1.15);
+  box-shadow: 0 6px 35px rgb(255, 255, 255);
+  border-color: #001058;
+}
+
+.profile h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #333;
+  letter-spacing: -0.5px;
+  text-transform: capitalize;
+}
+
+.profile p {
+  font-size: 18px;
+  font-weight: 300;
+  color: #777;
+  opacity: 0.85;
+  line-height: 1.6;
+  transition: opacity 0.3s ease;
+}
+
+.profile:hover p {
+  opacity: 1;
+}
+
+/* ===================================== */
+/*             RESPONSIVE STYLES         */
+/* ===================================== */
+@media (max-width: 768px) {
+  .profile {
+      padding: 50px 20px;
+  }
+
+  .profile img {
+      width: 140px;
+      height: 140px;
+  }
+
+  .profile h1 {
+      font-size: 30px;
+  }
+
+  .profile p {
+      font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile {
+      padding: 40px 15px;
+  }
+
+  .profile img {
+      width: 120px;
+      height: 120px;
+  }
+
+  .profile h1 {
+      font-size: 26px;
+  }
+
+  .profile p {
+      font-size: 14px;
+  }
+}
+
+/* ===================================== */
+/*             LINKS SECTION             */
+/* ===================================== */
+.links {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+  gap: 18px;
+  animation: fadeIn 1s ease;
+}
+
+.links a {
+  text-decoration: none;
+  padding: 14px 20px;
+  background: #007aff;
+  color: #fff;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.links a:hover {
+  background: #0051cc;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ===================================== */
+/*             SOCIAL ICONS             */
+/* ===================================== */
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  padding: 20px;
+  background: #fff;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.social a {
+  font-size: 30px;
+  color: #007aff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social a:hover {
+  transform: scale(1.2);
+  color: #0051cc;
+}
+
+/* ===================================== */
+/*             ANIMATIONS               */
+/* ===================================== */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ===================================== */
+/*         NAVIGATION BAR STYLES        */
+/* ===================================== */
+.profile-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 15px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-link {
+  color: #007aff;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 0 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link:hover {
+  background-color: #f0f0f5;
+  color: #333;
+}
+
+/* ===================================== */
+/*             HAMBURGER MENU           */
+/* ===================================== */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* ===================================== */
+/*       RESPONSIVE NAVIGATION BAR      */
+/* ===================================== */
+@media screen and (max-width: 768px) {
+  .profile-nav {
+    padding: 15px 15px;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 10;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .nav-link {
+    width: 100%;
+    margin: 8px 0;
+    padding: 12px;
+    text-align: center;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav-link {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+
+/* ===================================== */
+/*             FADE OUT ANIMATION       */
+/* ===================================== */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}

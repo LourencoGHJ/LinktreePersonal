@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guilherme Faria - Linktree Premium</title>
+  <!-- CSS Principal -->
+  <link rel="stylesheet" href="assets/cs/styles.css">
+  <link rel="stylesheet" href="assets/cs/vip.css">
+  <link rel="stylesheet" href="assets/cs/certificados.css">
+  <link rel="stylesheet" href="assets/cs/dashboard.css">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Esconde todas as secções inicialmente */
+    .section {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Secção de Perfil -->
+    <header class="profile">
+      <img src="assets/img/perfil.jpg" alt="Perfil de Guilherme" class="profile-img">
+      <h1>Guilherme Faria</h1>
+      <p>Programador</p>
+      <!-- Links de Navegação -->
+      <nav class="profile-nav">
+        <a href="#" class="nav-link" onclick="showSection('linktree')">Linktree</a>
+        <a href="#" class="nav-link" onclick="showSection('exclusive-club')">Clube Exclusivo</a>
+        <a href="#" class="nav-link" onclick="showSection('trophy-room')">Salão de Reconhecimento</a>
+        <a href="#" class="nav-link" onclick="showSection('personal-dashboard')">Dashboard Pessoal</a>
+      </nav>
+    </header>
+
+<!-- Secção Linktree -->
+<section id="linktree" class="section">
+  <h2>Linktree</h2>
+  <p>Aqui estão todos os links e informações úteis.</p>
+  
+  <!-- Links principais -->
+  <div class="links">
+    <a href="https://lourencoghj.github.io/Portfolio/" class="link-btn" target="_blank"><i class="fas fa-briefcase"></i> Portfólio</a>
+    <a href="mailto:gui.lourenco.faria@gmail.com?subject=Parceria&body=Gostaria%20de%20discutir%20uma%20parceria" class="link-btn">
+      <i class="fas fa-envelope"></i> Parcerias
+    </a>
+    
+    
+  </div>
+  
+  <!-- Redes Sociais -->
+  <section class="social">
+    <a href="https://instagram.com/guilhermee.faria" target="_blank" aria-label="Instagram" class="social-btn">
+      <i class="fab fa-instagram"></i> 
+    </a>
+    
+    </a>
+    <a href="https://discord.gg/8fQqF2pp" class="social-btn">
+      <i class="fab fa-discord"></i> 
+    </a>
+
+    </a>
+    <a href="https://github.com/LourencoGHJ" target="_blank" aria-label="GitHub" class="social-btn">
+    <i class="fab fa-github"></i> 
+    </a>
+    
+  </section>
+</section> <!-- Fim da Secção Linktree -->
+
+<!-- Secção Private  -->
+<section id="exclusive-club" class="section">
+  <h2>Clube Exclusivo (Área Restrita)</h2>
+
+  <!-- Formulário de Login -->
+  <div id="loginContainer">
+    <form id="loginForm" class="login-form">
+      <label for="username">Nome de Utilizador</label>
+      <input type="text" id="username" name="username" placeholder="Insira o seu nome" required>
+
+      <label for="password">Palavra-Passe</label>
+      <input type="password" id="password" name="password" placeholder="Insira a sua palavra-passe" required>
+
+      <button type="submit">Entrar</button>
+    </form>
+    <div id="statusMessage" class="status-message"></div>
+  </div>
+
+<!-- Conteúdo Exclusivo -->
+<div id="infoContainer" class="vip-info hidden">
+  <h3 class="vip-title">Bem-vindo ao Conteúdo Exclusivo</h3>
+  <p class="vip-description">
+    Descubra informações antecipadas sobre o <strong>Get FocusMate</strong>:
+  </p>
+  <ul class="vip-list">
+    <li class="vip-item">
+      <i class="fas fa-calendar-alt vip-icon"></i> <strong>Lançamento:</strong> Brevemente
+    </li>
+    <li class="vip-item">
+      <i class="fas fa-cogs vip-icon"></i> <strong>Funcionalidade Principal:</strong> Produtividade e bem-estar mental.
+    </li>
+    <li class="vip-item">
+      <i class="fas fa-star vip-icon"></i> <strong>Benefícios:</strong> Acesso exclusivo a ferramentas inovadoras!
+    </li>
+    <li class="vip-item">
+      <i class="fas fa-user-secret vip-icon"></i> <strong>Exclusividade:</strong> Apenas para membros selecionados.
+    </li>
+    <li class="vip-item">
+      <i class="fas fa-check-circle vip-icon"></i> <strong>Segurança:</strong> Garantia de privacidade total dos dados.
+    </li>
+    <li class="vip-item">
+      <i class="fas fa-trophy vip-icon"></i> <strong>Premiações:</strong> Oferecemos prêmios especiais para os melhores usuários.
+    </li>
+    <!-- Novos itens administrativos -->
+    <li class="vip-item">
+      <i class="fas fa-chart-line vip-icon"></i> <strong>Desempenho:</strong> Monitoramento em tempo real de sua produtividade.
+    </li>
+    <li class="vip-item">
+      <i class="fas fa-plug vip-icon"></i> <strong>Integrações:</strong> Suporte para as ferramentas mais populares: Google Calendar, Slack, etc.
+    </li>
+    <li class="vip-item">
+      <i class="fas fa-comment-alt vip-icon"></i> <strong>Feedback:</strong> Avalie e receba sugestões personalizadas para otimizar sua experiência.
+    </li>
+    <li class="vip-item">
+      <i class="fas fa-robot vip-icon"></i> <strong>IA Integrada:</strong> A Inteligência Artificial irá sugerir estratégias de produtividade.
+    </li>
+    <li class="vip-item">
+      <i class="fas fa-shield-alt vip-icon"></i> <strong>Proteção de Dados:</strong> Protocolos de segurança de última geração para proteger seus dados.
+    </li>
+    <li class="vip-item">
+      <i class="fas fa-users vip-icon"></i> <strong>Comunidade:</strong> Acesso a uma rede exclusiva de membros que buscam o mesmo objetivo.
+    </li>
+  </ul>
+  <p class="vip-note">
+    Prepare-se para uma experiência transformadora. Estamos trazendo o futuro da produtividade e do bem-estar mental!
+  </p>
+  <button class="cta-button">Brevemente</button>
+</div>
+</section>
+
+
+  <!-- Secção Sala de Troféus -->
+<section id="trophy-room" class="section">
+  <h2>Salão de Reconhecimento</h2>
+  <p>Aqui estão os meus certificados e conquistas.</p>
+  <div class="trophy-cards">
+    <div class="trophy-card first">
+      <div class="rank">1º</div>
+      <h3>Certificado Premio Supera</h3>
+      <p>2023</p>
+    </div>
+    <div class="trophy-card second">
+      <div class="rank">2º</div>
+      <h3>Certificado Quadro de valor</h3>
+      <p>2024</p>
+    </div>
+    <div class="trophy-card third">
+      <div class="rank">3º</div>
+      <h3>Certificado Reconhecimento JavaScript </h3>
+      <p>2025</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+    <!-- Secção Dashboard Pessoal -->
+    <section id="personal-dashboard" class="section">
+      <h2>Dashboard Pessoal</h2>
+      <p>Bem-vindo ao meu painel de informações pessoais.</p>
+      <ul>
+        <li><strong>Horas de Código:</strong> 3,430 horas</li>
+        <li><strong>Projetos Completados:</strong> 25</li>
+        <li><strong>Clientes Satisfeitos:</strong> 18</li>
+      </ul>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+      <p>© 2025 Guilherme Faria. Feito com 💻 e café ☕. </p>
+    </footer>
+  </div>
+</body>
+<script src="assets/js/index.js"></script>
+<script src="assets/js/authorizedLogins.js"></script>
+</html>
