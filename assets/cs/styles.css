@@ -97,6 +97,10 @@ body {
 .profile:hover p {
   opacity: 1;
 }
+.profile-nav {
+  display: flex;
+  justify-content: center;   
+}
 
 /* ===================================== */
 /*             RESPONSIVE STYLES         */
@@ -171,7 +175,29 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
+.nav-link {
+  margin: 0 10px;            
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+.nav-link:hover {
+  background-color: #ddd;
+}
+/* Estilos para o menu no mobile */
+@media screen and (max-width: 768px) {
+  .profile-nav {
+    overflow-x: auto;        
+    white-space: nowrap;     
+    -webkit-overflow-scrolling: touch; 
+  }
 
+  .nav-link {
+    display: inline-block;   
+  }
+}
 /* ===================================== */
 /*             SOCIAL ICONS             */
 /* ===================================== */
