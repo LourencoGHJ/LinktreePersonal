@@ -99,9 +99,12 @@ body {
 }
 .profile-nav {
   display: flex;
-  justify-content: center;   
+  flex-wrap: wrap; /* Permite que os links quebrem linha em dispositivos pequenos */
+  justify-content: center; /* Alinha os links ao centro */
+  gap: 15px; /* Espaço entre os links */
+  padding: 10px;
+  overflow-x: auto; /* Permite rolar horizontalmente se necessário */
 }
-
 /* ===================================== */
 /*             RESPONSIVE STYLES         */
 /* ===================================== */
@@ -176,26 +179,27 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 .nav-link {
-  margin: 0 10px;            
   text-decoration: none;
-  color: #333;
   font-size: 16px;
-  padding: 8px 12px;
+  color: #333; /* Cor do texto */
+  padding: 10px 15px;
   border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 .nav-link:hover {
-  background-color: #ddd;
+  background-color: #3498db;
+  color: white;
 }
 /* Estilos para o menu no mobile */
 @media screen and (max-width: 768px) {
   .profile-nav {
-    overflow-x: auto;        
-    white-space: nowrap;     
-    -webkit-overflow-scrolling: touch; 
+    justify-content: space-around; /* Distribui os links igualmente */
+    gap: 10px; /* Reduz o espaço entre os links */
   }
 
   .nav-link {
-    display: inline-block;   
+    font-size: 14px; /* Tamanho da fonte menor para se ajustar melhor em telas pequenas */
+    padding: 8px 12px; /* Menos padding para compactar os links */
   }
 }
 /* ===================================== */
@@ -328,6 +332,8 @@ body {
   .nav-links.open {
     display: flex;
   }
+  
+ 
 }
 
 @media screen and (max-width: 480px) {
